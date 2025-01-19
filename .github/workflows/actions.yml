@@ -1,0 +1,13 @@
+name: actions
+
+on:
+  push:
+
+
+jobs:
+  test-actions:
+    name: test-cation
+    runs-on: ubuntu-latets
+
+    steps: 
+      - name:
