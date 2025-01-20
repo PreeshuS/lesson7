@@ -13,7 +13,7 @@ jobs:
       - name: list files
         run: ls
       - name: Checkout
-        uses: actions/checkout@v4.1.7
+        uses: actions/checkout@v4.1.1
       - name: ls
         run: ls
       - name: hello-world-action
