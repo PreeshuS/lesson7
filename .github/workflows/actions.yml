@@ -6,8 +6,26 @@ on:
 
 jobs:
   test-actions:
-    name: test-cation
+    name: test-action
     runs-on: ubuntu-latets
 
     steps: 
-      - name:
+      - name: list files
+        run: ls
+      - name: Checkout
+        uses: actions/checkout@v4.1.7
+      - name: ls
+        run: ls
+      - name: hello-world-action
+        id: hello-world-action
+        uses: actions/hello-world-javascript-action@main
+        with:
+          who-to-greet: "Preeshu"
+      - name: time
+        run: echo "'greeting time:' ${{ steps.hello-world-action.outputs.time }}"
+      - name: docker action
+        uses: docker://hello-world:latest
+      
+        
+ 
+    
